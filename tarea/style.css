@@ -1,0 +1,43 @@
+body {
+    background-color: yellow;
+}
+
+.estado {
+    text-decoration: line-through;
+}
+
+#contenedor {
+    background-color: rgba(80, 250, 80, 0.2);
+    width: 40vw;
+    margin:auto;
+    border:solid grey 1px;
+}
+
+input{
+    display: block;
+    margin:auto;
+    text-align: center;
+}
+
+.add {
+    background-color: rgba(80, 250, 80, 0.2);
+    border: solid white 1px;
+}
+
+.add:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    text-align: center;
+}
+
+th {
+    width: 150px;
+}

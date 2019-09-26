@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Tarea con Vue</title>
+</head>
+<body>
+    <div>
+        <div id="contenedor">
+            <h1>
+                {{ titulo }}
+            </h1>
+            <form v-on:submit="addTarea(tareas)">
+                <input type="text" v-model="tareas.nombre" placeholder="Añadir Tarea">
+                <br>
+                <input type="submit" class="add" value="Añadir Tarea">
+
+            </form>
+            <table>
+                <th>Estado</th>
+                <th>Tarea</th>
+                <th>Eliminar</th>
+                <tr v-for="tarea in tareas">
+                    <td> <input type="checkbox" v-model="tarea.estado"> </td>
+                    <td v-bind:class="{estado: tarea.estado}"> {{ tarea.nombre }} </td>
+                    <td>
+                        <button v-on:click="quitarTarea(tarea)">X</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="app.vue"></script>
+
+</html>
